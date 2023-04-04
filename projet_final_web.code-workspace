@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../projet_final_web"
+		},
+		{
+			"path": "../web-cour-jvs2"
+		},
+		{
+			"path": "../web-cour-javascript1"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "projet_final_web"
+	}
+}
