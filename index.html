@@ -1,344 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet dfdffinal </title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Deminor</title>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <script type="module" src="./js/dom.js"></script>
-</head>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/reset.css">
+        <script type="module" src="./js/dom.js"></script>
+        <script type="module" src="./js/lauch.js"></script>
+    </head>
+    <body id="body">
+        <header><h1>Mine sweeper</h1></header>
+        <main>
+            <div id="game">
+                <aside id="aside">
+                    <div id="score">Score<div id="result"></div></div>
+                    <div id="fuel">Fuel<div id="level"></div></div>
+                </aside>
 
+                <table id="table">
+                    <tr class="tr"><td class='td'></td ><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td></tr>
+                    <tr><td class='td'id="coucou"></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td></tr>
+                    <tr><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td></tr>
+                    <tr><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td></tr>
+                    <tr><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td></tr>
+                    <tr><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td></tr>
+                    <tr><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td></tr>
+                    <tr><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td></tr>
+                    <tr><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td></tr>
+                    <tr><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td></tr>
+                    <tr><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td></tr>
+                    <tr><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td></tr>
+                    <tr><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td></tr>
+                    <tr><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td></tr>
+                    <tr><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td><td class='td'></td></tr>
+                </table>
+            </div>
 
-<body>
-
-    <header>
-
-    </header>
-
-    <main>
-
-        <div class="principal"> 
-
-            <div class="gauche">
-                <div class="score">
-                    Score
-                    score
+            <div id="commande">
+                <div id="leftside">
+                    <div id="groupcommand">
+                        <input type="button" class="button left" accesskey="a" value="turn left">
+                        <div id="middleside">
+                            <input type="button" class="button middle" accesskey="w" value="forward">
+                            <input type="button" class="button middle" accesskey="s" value="shoot">
+                        </div>
+                        <input type="button" class="button right" accesskey="d" value="turn right">
+                    </div>
                 </div>
-                <div class="fuel">
-                    Fuel
+                <div id="rightside">
+                    <input type="button" class="button reset" value="reset">
                 </div>
             </div>
+        </main>
 
-            <table class="table">
-                <!-- creation d'un tableau de 15 rangees et 15 colonnes  -->
-              
-                <tr class="centre">
-                    <td class="rouge" ></td >
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td class="bleu"></td>
-                    <td class="rouge"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="rouge" ></td>
-                    <td class="bleu"></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    <td class="vert"></td>
-                </tr>
-    
-                <tr class="centre">
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    <td class="bleu"></td>
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    <td class="bleu"></td>
-                    <td class="bleu"></td>
-                    <td ></td>
-                    
-                </tr>
-    
-                <tr class="centre">
-                    <td ></td>
-                    <td class="rouge"></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td class="rouge"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="bleu"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    <td class="vert"></td>
-                    <td class="rouge" ></td>
-                    <td class="bleu"></td>
-                    <td class="rouge"></td>
-        
-                </tr>
-    
-                <tr class="centre">
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="bleu"></td>
-                    <td class="rouge"></td>
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td class="bleu"></td>
-                    
-                </tr>
-    
-                <tr class="centre">
-                    <td class="rouge"></td>
-                    <td ></td>
-                    <td class="bleu"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td class="bleu"></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    
-                </tr>
-                <tr class="centre">
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="bleu"></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td class="vert"></td>
-                    <td ></td>
-                </tr>
-    
-                <tr class="centre">
-                    <td class="rouge"></td>
-                    <td class="rouge"></td>
-                    <td ></td>
-                    <td class="bleu"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td class="bleu"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    
-                </tr>
-    
-                <tr class="centre">
-                    <td ></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    <td class="vert"></td>
-                    <td class="rouge" ></td>
-                    <td class="rouge"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="bleu"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td ></td>
-                </tr>
-    
-                <tr class="centre">
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    <td ></td>
-                    <td class="bleu"></td>
-                    <td class="bleu"></td>
-                    <td ></td>
-                    
-                </tr>
-    
-                <tr class="centre">
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td class="bleu"></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td class="rouge"></td>
-                    <td ></td>
-                    <td class="bleu"></td>
-                    <td class="vert"></td>
-                    <td class="bleu"></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td ></td>
-        
-                </tr>
-    
-                <tr class="centre">
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td class="rouge"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td class="bleu"></td>
-                    
-                </tr>
-    
-                <tr class="centre">
-                    <td class="bleu"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    <td class="bleu"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    
-                </tr>
-                <tr class="centre">
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="bleu"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    <td class="rouge"></td>
-                    <td ></td>
-                    <td class="bleu"></td>
-                    <td ></td>
-                </tr>
-    
-                <tr class="centre">
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="rouge" ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td class="bleu"></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    
-                </tr>
-    
-                <tr class="centre">
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="bleu"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="bleu"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="vert"></td>
-                    <td ></td>
-                    <td ></td>
-                    <td class="rouge" ></td>
-                    <td ></td>
-                    <td class="rouge"></td>
-                    
-                </tr>
-
-            </table>
-
-        </div>
-
-        <div class="bas">
-            <div class="extremite1">  
-                <input type="button" class="extremite" value="turn left">
-                <input type="button" class="extremite" value="turn right">
-            </div>
-            
-            <input type="button" class="reset" value="reset">
-
-            <div class="milieu">
-                <input type="button" class="milieu" value="forward">
-                <input type="button" class="milieu" value="shoot">
-            </div>
-           
-        </div>
-
-       
-    </main>
-
-    <footer>
-
-    </footer>
-
-    
-</body>
+        <footer>
+        </footer>
+    </body>
 </html>
